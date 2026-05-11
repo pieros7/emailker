@@ -1,2 +1,2 @@
 # emailker
-Sistema de edicion de correso
+Sistema editor de correos

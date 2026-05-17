@@ -28,6 +28,7 @@ export class UsersController {
     const passwordHash = await bcrypt.hash(createUserDto.password, 12);
     const user = await this.usersService.create({
       email: createUserDto.email,
+      name: createUserDto.name,
       passwordHash,
       roleId: createUserDto.roleId,
     });

@@ -490,7 +490,7 @@ docker image prune -f
 
 | Decisión | Razón |
 |---|---|
-| **Node 24 LTS** | Active LTS con soporte hasta abril 2028; Node 20 y 22 ya están en Maintenance |
+| **Node 24 LTS** | Active LTS con soporte hasta abril 2028 |
 | **Etapa `prod-deps` separada** en Core | `npm ci` instala todas las deps incluyendo devDependencies. Sin esta etapa, TypeScript, `@types/*` y demás se cuelan en producción |
 | **Sin `depends_on: core`** en Frontend | Nginx sirve archivos estáticos y no llama a Core al arrancar. La dependencia real vive en el browser. Sin este `depends_on` Frontend y Core arrancan en paralelo, acelerando el inicio del stack |
 | **`target: deps`** en override de Frontend | `target: builder` ejecuta `npm run build` completo que se descarta al instante porque el comando es `npm run dev`. Con `deps` + volumen montado el Vite dev server tiene todo lo que necesita sin el build innecesario |

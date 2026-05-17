@@ -41,14 +41,14 @@ export class AuthController {
 
   @UseGuards(JwtAuthGuard)
   @Post('logout')
-  async logout(@Res({ passthrough: true }) response: express.Response) {
+  logout(@Res({ passthrough: true }) response: express.Response) {
     response.clearCookie('token', { path: '/' });
     return { message: 'Logged out' };
   }
 
   @UseGuards(JwtAuthGuard)
   @Get('me')
-  async getMe(@Req() req: express.Request) {
+  getMe(@Req() req: express.Request) {
     return req.user;
   }
 }

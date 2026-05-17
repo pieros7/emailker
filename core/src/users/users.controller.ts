@@ -30,7 +30,7 @@ export class UsersController {
       email: createUserDto.email,
       name: createUserDto.name,
       passwordHash,
-      roleId: createUserDto.roleId,
+      roleId: null,
     });
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

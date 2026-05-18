@@ -79,10 +79,19 @@ emailker/
 ### Configuración del entorno
 
 ```sh
-# 1. Copiar la plantilla de variables de entorno
-cp .env.example .env
+# levantar db
+sudo docker compose -f docker-compose.db-core.yml up -d
 
-# 2. Editar .env con los valores reales antes de levantar los servicios
+# levantar Backend core
+cd core/
+npm run start:dev
+
+# levantar Frontend
+cd ../frontend/
+npm run dev
+
+# eliminar db
+sudo docker compose down
 ```
 
 Las variables disponibles se encuentran documentadas en `.env.example`. Como mínimo, es necesario definir las credenciales de PostgreSQL, la `DATABASE_URL` del Core y el `JWT_SECRET`.

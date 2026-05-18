@@ -77,6 +77,7 @@ emailker/
 - [Docker](https://docs.docker.com/get-docker/) y [Docker Compose](https://docs.docker.com/compose/) instalados.
 
 ### Configuración del entorno
+crear el .env
 
 ```sh
 # levantar db

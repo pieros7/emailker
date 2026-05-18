@@ -1,0 +1,22 @@
+info:
+  name: new project
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: http://localhost:3001/api/projects
+  body:
+    type: form-urlencoded
+    data:
+      - name: name
+        value: test
+      - name: description
+        value: test desc
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,21 @@
+info:
+  name: delete project
+  type: http
+  seq: 14
+
+http:
+  method: DELETE
+  url: http://localhost:3001/api/projects/:id
+  params:
+    - name: id
+      value: 85c0706a-9ef4-4763-86e9-f150ce0dc4be
+      type: path
+  body:
+    type: form-urlencoded
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,21 @@
+info:
+  name: delete user
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: http://localhost:3001/api/users/:id
+  params:
+    - name: id
+      value: 1c261237-67ba-47cf-8b50-d0ad77bd500f
+      type: path
+  body:
+    type: form-urlencoded
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

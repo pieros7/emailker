@@ -1,0 +1,26 @@
+info:
+  name: new user
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:3001/api/users/new
+  body:
+    type: form-urlencoded
+    data:
+      - name: email
+        value: a@a.com
+      - name: name
+        value: a
+      - name: password
+        value: "12345678"
+      - name: role
+        value: user
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -6,6 +6,7 @@ import {
   UpdateDateColumn,
   DeleteDateColumn,
 } from 'typeorm';
+import { Role } from './enums/role.enum';
 
 @Entity('users')
 export class User {
@@ -21,8 +22,12 @@ export class User {
   @Column()
   passwordHash: string;
 
-  @Column({ type: 'uuid', nullable: true })
-  roleId: string | null;
+  @Column({
+    type: 'enum',
+    enum: Role,
+    default: Role.USER,
+  })
+  role: Role;
 
   @CreateDateColumn()
   createdAt: Date;

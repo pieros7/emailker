@@ -1,18 +1,18 @@
 info:
-  name: login
+  name: new project
   type: http
-  seq: 3
+  seq: 7
 
 http:
   method: POST
-  url: http://localhost:3001/api/auth/login
+  url: http://localhost:3001/api/projects
   body:
     type: form-urlencoded
     data:
-      - name: email
-        value: admin@admin.com
-      - name: password
-        value: "12345678"
+      - name: name
+        value: test
+      - name: description
+        value: test desc
   auth: inherit
 
 settings:

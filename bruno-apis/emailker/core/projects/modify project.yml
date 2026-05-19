@@ -1,20 +1,22 @@
 info:
-  name: modify user
+  name: modify project
   type: http
-  seq: 8
+  seq: 9
 
 http:
   method: PATCH
-  url: http://localhost:3001/api/users/:id
+  url: http://localhost:3001/api/projects/:id
   params:
     - name: id
-      value: 1c261237-67ba-47cf-8b50-d0ad77bd500f
+      value: 85c0706a-9ef4-4763-86e9-f150ce0dc4be
       type: path
   body:
     type: form-urlencoded
     data:
       - name: name
-        value: Administradorr
+        value: testeo
+      - name: description
+        value: ""
   auth: inherit
 
 settings:

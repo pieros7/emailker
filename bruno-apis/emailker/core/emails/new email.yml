@@ -1,0 +1,26 @@
+info:
+  name: new email
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:3001/api/emails
+  body:
+    type: form-urlencoded
+    data:
+      - name: idProyecto
+        value: ea394074-b1c6-4efd-a160-844355154257
+      - name: idUsuarioCreador
+        value: 22dfb6b0-61c3-43ed-ba8a-b53ad411f9fe
+      - name: nombre
+        value: testeo
+      - name: descripcion
+        value: testeo desc
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

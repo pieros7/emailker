@@ -1,17 +1,20 @@
 info:
-  name: delete project
+  name: modify user
   type: http
-  seq: 14
+  seq: 6
 
 http:
-  method: DELETE
-  url: http://localhost:3001/api/projects/:id
+  method: PATCH
+  url: http://localhost:3001/api/users/:id
   params:
     - name: id
-      value: 85c0706a-9ef4-4763-86e9-f150ce0dc4be
+      value: 1c261237-67ba-47cf-8b50-d0ad77bd500f
       type: path
   body:
     type: form-urlencoded
+    data:
+      - name: name
+        value: Administradorr
   auth: inherit
 
 settings:

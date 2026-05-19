@@ -1,14 +1,14 @@
 info:
-  name: delete user
+  name: project all emails
   type: http
-  seq: 9
+  seq: 11
 
 http:
-  method: DELETE
-  url: http://localhost:3001/api/users/:id
+  method: GET
+  url: http://localhost:3001/api/projects/:id/emails
   params:
     - name: id
-      value: 1c261237-67ba-47cf-8b50-d0ad77bd500f
+      value: 85c0706a-9ef4-4763-86e9-f150ce0dc4be
       type: path
   body:
     type: form-urlencoded

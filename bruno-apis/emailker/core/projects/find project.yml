@@ -1,10 +1,10 @@
 info:
-  name: modify project
+  name: find project
   type: http
-  seq: 13
+  seq: 10
 
 http:
-  method: PATCH
+  method: GET
   url: http://localhost:3001/api/projects/:id
   params:
     - name: id
@@ -12,11 +12,6 @@ http:
       type: path
   body:
     type: form-urlencoded
-    data:
-      - name: name
-        value: testeo
-      - name: description
-        value: ""
   auth: inherit
 
 settings:
